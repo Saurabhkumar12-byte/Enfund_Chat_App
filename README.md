@@ -21,8 +21,8 @@ Enfund ChatApp is a simple and interactive chat application built with **React N
 
 1. **Clone the Repository**
    ```bash
-[   git clone https://github.com/your-repo/enfund-chatapp.git
-](https://github.com/Saurabhkumar12-byte/Enfund_Chat_App.git)   cd Enfund_Chat_App
+(https://github.com/Saurabhkumar12-byte/Enfund_Chat_App.git)   
+cd Enfund_Chat_App
    ```
 
 2. **Install Dependencies**
