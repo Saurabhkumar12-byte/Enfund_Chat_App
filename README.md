@@ -1,97 +1,104 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Enfund ChatApp
 
-# Getting Started
+Enfund ChatApp is a simple and interactive chat application built with **React Native**. This app allows users to create chat rooms, join active conversations, and stay connected with others in real-time.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+✅ Set unique usernames to identify users.  
+✅ Create and join chat rooms with live updates.  
+✅ Displays room creation time and expiration status.  
+✅ Clean UI with a professional look and feel.  
+✅ Fully responsive and optimized for both Android and iOS devices.  
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Tech Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **React Native** (CLI-based)  
+- **TypeScript** for type safety  
+- **React Navigation** for screen management  
+- **WebSocket** for real-time chat functionality  
 
-```sh
-# Using npm
-npm start
+## Installation
 
-# OR using Yarn
-yarn start
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-repo/enfund-chatapp.git
+   cd enfund-chatapp
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Link Dependencies** (For iOS only)
+   ```bash
+   npx pod-install ios
+   ```
+
+4. **Start the Application**
+   ```bash
+   npm run android    # For Android devices/emulators
+   npm run ios         # For iOS devices/simulators
+   ```
+
+## Usage
+
+1. **Set Username**: Enter your unique username to get started.
+2. **Join a Room**: Select from the available chat rooms or create a new one.
+3. **Chat in Real-Time**: Send and receive messages instantly using WebSocket communication.
+
+## API Endpoints
+
+- **Set Username:** `POST /chat/username`
+- **Fetch Rooms:** `GET /chat/rooms`
+- **Create Room:** `POST /chat/rooms`
+- **Get Messages in Room:** `GET /chat/rooms/{roomID}/messages`
+
+## Screens Overview
+
+- **SetUsernameScreen**: Users enter their desired username.  
+- **RoomsListScreen**: Displays available chat rooms with details like expiration time.  
+- **ChatScreen**: Provides real-time messaging within selected chat rooms.  
+- **CreateRoomScreen**: Allows users to create custom chat rooms.  
+
+## Folder Structure
+```
+├── src
+│   ├── components
+│   │   ├── CustomTopBar.tsx
+│   ├── screens
+│   │   ├── SetUsernameScreen.tsx
+│   │   ├── RoomsListScreen.tsx
+│   │   ├── ChatScreen.tsx
+│   │   ├── CreateRoomScreen.tsx
+│   ├── services
+│   │   ├── apiService.ts
+│   ├── App.tsx
+│   ├── navigation.tsx
+│
+├── package.json
+├── README.md
 ```
 
-## Step 2: Build and run your app
+## Known Issues
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- Occasionally, WebSocket may disconnect if inactive for a long time. Refreshing the app usually resolves this issue.
+- UI layout might slightly vary across devices; feel free to adjust margins and paddings if needed.
 
-### Android
+## Future Improvements
 
-```sh
-# Using npm
-npm run android
+✅ Add emoji support for chats.  
+✅ Implement user profile management.  
+✅ Enhance the design for improved user experience.  
 
-# OR using Yarn
-yarn android
-```
+## Contributing
 
-### iOS
+Contributions are welcome! Feel free to submit pull requests or report issues.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## License
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+This project is licensed under the **MIT License**.
 
-```sh
-bundle install
-```
+---
+Developed with ❤️ by **Saurabh**
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
